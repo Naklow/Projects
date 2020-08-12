@@ -1,0 +1,5129 @@
+#include<stdio.h>
+#include<conio.h>
+#include<locale.h>
+
+int g2,ee,geci,gy,gg,x1; 
+int i,x,dizi[30];
+float q,n,h,k,w,z,v,u,t,s,r,p,o,m,a11,a12,a13,a14,a1,a2,a3,a4,a5,a6,a7,a8,a9;
+int j,je,jee,j3,j4,j5,j6,j7,j8,j9,j10,j11,j12,j13,j14,j15,j16,j17,j18,j19,j20,j21,j22,j23,j24,j25,j26;
+int g,ge,gec,g3,g4,g5,g6,g7,g8,g9,g10,g11,g12,g13,g14,g15,g16,g17,g18,g19,g20,g21,g22,g23,g24,g25,g26;
+float y1,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12,y13,y14,y15,y16,y17,y18,y19,y20,y21,y22,y23,y24,y25,y26,y27;
+
+float a[27][27]={{0,2.7,2.6,2.8,3.2,1.4,1.8,5.3,2.3,4,1.3,3.7,1.7,3.2,5.2,5.5,3.9,6.2,1.6,4.8,10.9,4.7,3.3,2.9,4.2,13,5.3},{2.7,0,4.6,0.75,1.1,1.5,3.2,5.3,2.3,3.4,1.4,5,1.8,3.2,5.2,6.5,5.8,7.9,2.3,4.8,10.4,4.2,0.8,0.27,1.9,13.3,5.3},{2.6,4.6,0,3.6,3.5,3,2,4.1,2.5,1.9,4.3,2.7,2.9,3.7,4.4,9,1.9,6.4,2.7,5.1,15,3.4,5.3,5,1.2,16,4.7},{2.8,0.75,3.6,0,1.2,0.95,1.2,3.8,2.2,3.1,0.8,2.9,1.9,3.3,4.1,4.9,4.8,6.7,1.2,4,11,3.8,2.2,0.7,5.4,12,1.4},{3.2,1.1,3.5,1.2,0,1.6,3.4,4,2.2,3.6,2,3.4,1.9,2.4,4.3,4.7,6.4,6.3,2.4,4,10.1,3.9,1.3,1.4,3,11.5,4.5},{1.4,1.5,3,0.95,1.6,0,1.8,4.2,1.2,2.4,1.2,2.2,0.7,2.1,4.1,4.5,4.8,5.1,0.5,3.7,9.9,3.6,2,1.7,3.3,11.9,4.3},{1.8,3.2,2,1.2,3.4,1.8,0,5.1,1.5,2.8,1.8,2.5,1.1,3,5,5.4,3.5,6,0.75,4.7,10.8,3.5,4.2,3.2,2.8,12.9,5.2},{5.3,5.3,4.1,3.8,4,4.2,5.1,0,2.5,2.2,4.3,1.7,3.1,2.1,1.1,5.1,5.8,1.8,3.5,1.5,11.2,2.2,4.7,5.5,5.1,13.3,2.7},{2.3,2.3,2.5,2.2,2.2,1.2,1.5,2.5,0,1,6,0.9,0.8,1.8,2.9,3.7,4,5,1.2,3.1,9.4,2.3,4.2,5.5,3.3,11,2.5},{4,3.4,1.9,3.1,3.6,2.4,2.8,2.2,1,0,3.5,0.9,1.4,1.8,2.8,4.3,3.5,5.3,1.8,3.1,10,1.8,5.3,4,2.8,11,3.1},{1.3,1.4,4.3,0.8,2,1.2,1.8,4.3,6,3.5,0,4.9,3.1,4.5,6.5,6.7,5,8.5,2.1,6.2,11.6,6.1,2.1,1.6,5.3,14.3,6.7},{3.7,5,2.7,2.9,3.4,2.2,2.5,1.7,0.9,0.9,4.9,0,1.8,2.2,4.2,4.6,4.6,5.2,2.2,3.8,10,1.1,3.5,3.2,3.6,12,4.4},{1.7,1.8,2.9,1.9,1.9,0.7,1.1,3.1,0.8,1.4,3.1,1.8,0,2,3.9,4.3,5.1,4.9,0.55,3.6,9.7,2.6,2.3,1.9,3,11.8,4.1},{3.2,3.2,3.7,3.3,2.4,2.1,3,2.1,1.8,1.8,4.5,2.2,2,0,2.4,3.1,6.2,3.4,2.7,1.9,8.5,1.9,4.2,5,4.9,10.6,2.9},{5.2,5.2,4.4,4.1,4.3,4.1,5,1.1,2.9,2.8,6.5,4.2,3.9,2.4,0,4.3,5.6,1.6,4.1,2,8.6,5.5,6.1,7.1,6.9,12,2.5},{5.5,6.5,9,4.9,4.7,4.5,5.4,5.1,3.7,4.3,6.7,4.6,4.3,3.1,4.3,0,7.4,3.6,4.1,2.5,5.9,5.3,6.3,7.1,8.7,8,0.8},{3.9,5.8,1.9,4.8,6.4,4.8,3.5,5.8,4,3.5,5,4.6,5.1,6.2,5.6,7.4,0,5.3,4.2,7.3,13.5,5.1,6.4,6,2.3,15.5,7.9},{6.2,7.9,6.4,6.7,6.3,5.1,6,1.8,5,5.3,8.5,5.2,4.9,3.4,1.6,3.6,5.3,0,4.8,3.5,8.9,5.2,6.1,5.8,6.5,10.9,3.1},{1.6,2.3,2.7,1.2,2.4,0.5,0.75,3.5,1.2,1.8,2.1,2.2,0.55,2.7,4.1,4.1,4.2,4.8,0,3.9,10,2.9,4.4,2.2,2.6,12.1,4.4},{4.8,4.8,5.1,4,4,3.7,4.7,1.5,3.1,3.1,6.2,3.8,3.6,1.9,2,2.5,7.3,3.5,3.9,0,7.3,2.1,4.7,5.5,5.1,9.7,1.1},{10.9,10.4,15,11,10.1,9.9,10.8,11.7,9.4,10,11.6,10,9.7,8.5,8.6,5.9,13.5,8.9,10,7.3,0,11,10,11,15,13,6.7},{4.7,4.2,3.4,3.8,3.9,3.6,3.5,2.2,2.3,1.8,6.1,1.1,2.6,1.9,5.5,5.3,5.1,5.2,2.9,2.1,11,0,7.1,6.8,6.2,14,3.7},{3.3,0.8,5.3,2.2,1.3,2,4.2,4.7,4.2,5.3,2.1,3.5,2.3,4.2,6.1,6.3,6.4,6.1,4.4,4.7,10,7.1,0,3,6.8,13.2,5.5},{2.9,0.27,5,0.7,1.4,1.7,3.2,5.5,5.5,4,1.6,3.2,1.9,5,7.1,7.1,6,5.8,2.2,5.5,11,6.8,3,0,5.9,3.2,5.5},{4.2,1.9,1.2,5.4,3,3.3,2.8,5.1,3.3,2.8,5.3,3.6,3,4.9,6.9,8.7,2.3,6.5,2.6,5.1,15,6.2,6.8,5.9,0,14.7,7},{13,13.3,16,12,11.5,11.9,12.9,13.3,11,11,14.3,12,11.8,10.6,12,8,15.5,10.9,12.1,9.7,13,14,13.2,3.2,14.7,0,8.3},{5.3,5.3,4.7,1.4,4.5,4.3,5.2,2.7,2.5,3.1,6.7,4.4,4.1,2.9,2.5,0.8,7.9,3.1,4.4,1.1,6.7,3.7,5.5,5.5,7,8.3,0}};
+
+main()
+{ 
+
+setlocale(LC_ALL,"Turkish");
+
+printf("Kaç yere gidilecek?:");
+scanf("%d",&i);
+dizi[0]=0;
+printf("Lütfen gitmek istediğiniz mahallelerin numaralarını giriniz.\n\n");
+printf("Girdiğiniz numarayı tekrar girmeyiniz! \n");
+printf("Alaybey:1\nAtakent:2\nBahariye:3\nBahçelievler:4\nBahriye Üçok:5\nBostanlı:6\nCumhuriyet:7\nDedebaşı:8\nDemirköprü:9\nDonanmacı:10\nFikrialtay:11\nGoncalar:12\nİmbatlı:13\nİnönü:14\nLatife Hanım:15\nMavişehir:16\nMustafa Kemal:17\nNergiz:18\nÖrnekköy:19\nSancaklı:20\nŞemikler:21\nTersane:22\nTuna:23\nYalı:24\nYamanlar:25\nZübeyde Hanım:26");
+
+x=1;
+for(x=1;x<i+1;x++)	
+{
+printf("\n \n %d . Mahalle=",x);
+scanf("%d",&dizi[x]);
+if(dizi[x]>26)
+	{
+	printf("Hatalı değer girdiniz!");
+	printf("\n \n %d . Mahalle=",x);
+	scanf("%d",&dizi[x]);
+	}
+		for(x1=0;x1<x;x1++)
+		{
+			if(dizi[x]==dizi[x1])
+			{
+			printf("Aynı değeri girdiniz");
+			printf("\n \n %d . Mahalle=",x);
+			scanf("%d",&dizi[x]);
+			}
+			if(dizi[x]>26)
+		{
+		printf("Hatalı değer girdiniz!");
+		printf("\n \n %d . Mahalle=",x);
+		scanf("%d",&dizi[x]);
+		}
+		}
+}
+
+
+
+if(i==1)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	y1=q;
+	printf("Gidilecek Guzergah= 0 %d   Gidilecek Yolun Uzunlugu= %f ",dizi[g],y1);
+}
+
+else if(i==2)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	y2=q+n;
+	printf("Gidilecek Guzergah= 0 %d %d  Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],y2);
+}
+
+else if(i==3)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+				
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	y3=q+n+h;
+	printf("Gidilecek Guzergah= 0 %d %d %d  Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],y3);
+
+}
+
+else if(i==4)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	y4=q+n+h+k;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],y4);
+}
+else if(i==5)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	y5=q+n+h+k+w;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],y5);
+}
+
+else if(i==6)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+	
+		if(j!=0)
+			{
+				if (q>a[dizi[0]] [dizi[j]])
+				{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+				}
+			}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	y6=q+n+h+k+w+z;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],y6);
+}
+
+else if(i==7)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+			q=a[dizi[0]] [dizi[j]];
+			g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	y7=q+n+h+k+w+z+v;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],y7);
+}
+
+else if(i==8)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}	
+	y8=q+n+h+k+w+z+v+u;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],y8);
+
+}
+
+else if(i==9)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+				n=a[dizi[g]] [dizi[je]];
+				ge=je;	
+			}
+		}
+	}
+
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}	
+	y9=q+n+h+k+w+z+v+u+t;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],y9);
+}
+
+else if(i==10)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}	
+	y10=q+n+h+k+w+z+v+u+t+s;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],y10);
+}
+
+else if(i==11)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+				}
+			}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	y11=q+n+h+k+w+z+v+u+t+s+r;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],y11);
+}
+
+else if(i==12)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+			q=a[dizi[0]] [dizi[j]];
+			g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+	{
+		if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+		{
+			if(p>a[dizi[g10]] [dizi[j11]] )
+			{
+				p=a[dizi[g10]] [dizi[j11]];
+				g11=j11;
+			}
+		}
+	}		
+	
+	y12=q+n+h+k+w+z+v+u+t+s+r+p;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],y12);
+}
+
+else if(i==13)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+	{
+		if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+		{
+			if(p>a[dizi[g10]] [dizi[j11]] )
+			{
+				p=a[dizi[g10]] [dizi[j11]];
+				g11=j11;
+			}
+		}
+	}		
+	
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+	{
+		if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+		{
+			if(o>a[dizi[g11]] [dizi[j12]] )
+			{
+				o=a[dizi[g11]] [dizi[j12]];
+				g12=j12;
+			}
+		}
+	}	
+		y13=q+n+h+k+w+z+v+u+t+s+r+p+o;
+				printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],y13);
+}
+
+else if(i==14)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+				n=a[dizi[g]] [dizi[je]];
+				ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+	{
+		if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+		{
+			if(p>a[dizi[g10]] [dizi[j11]] )
+			{
+				p=a[dizi[g10]] [dizi[j11]];
+				g11=j11;
+			}
+		}
+	}		
+	
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+	{
+		if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+		{
+			if(o>a[dizi[g11]] [dizi[j12]] )
+			{
+				o=a[dizi[g11]] [dizi[j12]];
+				g12=j12;
+			}
+		}
+	}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+		y14=q+n+h+k+w+z+v+u+t+s+r+p+o+m;
+			printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],y14);
+}
+else if(i==15)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+			q=a[dizi[0]] [dizi[j]];
+			g=j;
+			}
+		}
+	}
+
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+	{
+		if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+		{
+			if(p>a[dizi[g10]] [dizi[j11]] )
+			{
+				p=a[dizi[g10]] [dizi[j11]];
+				g11=j11;
+			}
+		}
+	}		
+	
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+	{
+		if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+		{
+			if(o>a[dizi[g11]] [dizi[j12]] )
+			{
+				o=a[dizi[g11]] [dizi[j12]];
+				g12=j12;
+			}
+		}
+	}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	y15=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],y15);
+}
+
+else if(i==16)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+				
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+			q=a[dizi[0]] [dizi[j]];
+			g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+	{
+		if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+		{
+			if(p>a[dizi[g10]] [dizi[j11]] )
+			{
+				p=a[dizi[g10]] [dizi[j11]];
+				g11=j11;
+			}
+		}
+	}		
+	
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+	{
+		if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+		{
+			if(o>a[dizi[g11]] [dizi[j12]] )
+			{
+				o=a[dizi[g11]] [dizi[j12]];
+				g12=j12;
+			}
+		}
+	}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+	y16=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11+a12;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],y16);
+}
+
+else if(i==17)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+	{
+		if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+		{
+			if(p>a[dizi[g10]] [dizi[j11]] )
+			{
+				p=a[dizi[g10]] [dizi[j11]];
+				g11=j11;
+			}
+		}
+	}		
+	
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+	{
+		if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+		{
+			if(o>a[dizi[g11]] [dizi[j12]] )
+			{
+				o=a[dizi[g11]] [dizi[j12]];
+				g12=j12;
+			}
+		}
+	}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+	a13=200;	
+	for(j16=0;j16<i+1;j16++)
+	{
+		if(j16!=g3 && j16!=0 && j16!=gec && j16!=ge && j16!=g && j16!=g4 && j16!=g5 && j16!=g6 && j16!=g7 && j16!=g8 && j16!=g9 && j16!=g10 && j16!=g11 && j16!=g12 && j16!=g13 && j16!=g14 && j16!=g15)
+		{
+			if(a13>a[dizi[g15]] [dizi[j16]] )
+			{
+				a13=a[dizi[g15]] [dizi[j16]];
+				g16=j16;
+			}
+		}
+	}
+	y17=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11,a12+a13;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],dizi[g16],y17);
+
+}
+else if(i==18)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+				
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+			g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+	{
+		if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+		{
+			if(p>a[dizi[g10]] [dizi[j11]] )
+			{
+				p=a[dizi[g10]] [dizi[j11]];
+				g11=j11;
+			}
+		}
+	}		
+	
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+	{
+		if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+		{
+			if(o>a[dizi[g11]] [dizi[j12]] )
+			{
+				o=a[dizi[g11]] [dizi[j12]];
+				g12=j12;
+			}
+		}
+	}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+	
+	a13=200;	
+	for(j16=0;j16<i+1;j16++)
+	{
+		if(j16!=g3 && j16!=0 && j16!=gec && j16!=ge && j16!=g && j16!=g4 && j16!=g5 && j16!=g6 && j16!=g7 && j16!=g8 && j16!=g9 && j16!=g10 && j16!=g11 && j16!=g12 && j16!=g13 && j16!=g14 && j16!=g15)
+		{
+			if(a13>a[dizi[g15]] [dizi[j16]] )
+			{
+				a13=a[dizi[g15]] [dizi[j16]];
+				g16=j16;
+			}
+		}
+	}
+	
+	a14=200;	
+	for(j17=0;j17<i+1;j17++)
+	{
+		if(j17!=g3 && j17!=0 && j17!=gec && j17!=ge && j17!=g && j17!=g4 && j17!=g5 && j17!=g6 && j17!=g7 && j17!=g8 && j17!=g9 && j17!=g10 && j17!=g11 && j17!=g12 && j17!=g13 && j17!=g14 && j17!=g15 && j17!=g16)
+		{
+			if(a14>a[dizi[g16]] [dizi[j17]] )
+			{
+				a14=a[dizi[g16]] [dizi[j17]];
+				g17=j17;
+			}
+		}
+	}
+	y18=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11,a12+a13+a14;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],dizi[g16],dizi[g17],y18);
+}
+
+else if(i==19)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+				
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+w=200;
+for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+	{
+		if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+		{
+			if(p>a[dizi[g10]] [dizi[j11]] )
+			{
+				p=a[dizi[g10]] [dizi[j11]];
+				g11=j11;
+			}
+		}
+	}		
+	
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+	{
+		if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+		{
+			if(o>a[dizi[g11]] [dizi[j12]] )
+			{
+				o=a[dizi[g11]] [dizi[j12]];
+				g12=j12;
+			}
+		}
+	}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+
+	a13=200;	
+	for(j16=0;j16<i+1;j16++)
+	{
+		if(j16!=g3 && j16!=0 && j16!=gec && j16!=ge && j16!=g && j16!=g4 && j16!=g5 && j16!=g6 && j16!=g7 && j16!=g8 && j16!=g9 && j16!=g10 && j16!=g11 && j16!=g12 && j16!=g13 && j16!=g14 && j16!=g15)
+		{
+			if(a13>a[dizi[g15]] [dizi[j16]] )
+			{
+				a13=a[dizi[g15]] [dizi[j16]];
+				g16=j16;
+			}
+		}
+	}
+	
+	a14=200;	
+	for(j17=0;j17<i+1;j17++)
+	{
+		if(j17!=g3 && j17!=0 && j17!=gec && j17!=ge && j17!=g && j17!=g4 && j17!=g5 && j17!=g6 && j17!=g7 && j17!=g8 && j17!=g9 && j17!=g10 && j17!=g11 && j17!=g12 && j17!=g13 && j17!=g14 && j17!=g15 && j17!=g16)
+		{
+			if(a14>a[dizi[g16]] [dizi[j17]] )
+			{
+				a14=a[dizi[g16]] [dizi[j17]];
+				g17=j17;
+			}
+		}
+	}
+	
+	a1=200;
+	for(j18=0; j18<i+1; j18++)
+	{
+		if(j18!=g3 && j18!=0 && j18!=gec && j18!=ge && j18!=g && j18!=g4 && j18!=g5 && j18!=g6 && j18!=g7 && j18!=g8 && j18!=g9 && j18!=g10 && j18!=g11 && j18!=g12 && j18!=g13 && j18!=g14 && j18!=g15 && j18!=g16 && j18!=g17)
+		{
+			if(a1>a[dizi[g17]] [dizi[j18]])
+			{
+				a1=a[dizi[g17]] [dizi[j18]];
+				g18=j18;
+			}
+		}
+	}
+		y19=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11,a12+a13+a14+a1;
+		printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],dizi[g16],dizi[g17],dizi[g18],y19);
+
+}
+
+else if(i==20)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+				
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]])
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+	{
+		if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+		{
+			if(p>a[dizi[g10]] [dizi[j11]] )
+			{
+				p=a[dizi[g10]] [dizi[j11]];
+				g11=j11;
+			}
+		}
+	}		
+	
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+	{
+		if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+		{
+			if(o>a[dizi[g11]] [dizi[j12]] )
+			{
+				o=a[dizi[g11]] [dizi[j12]];
+				g12=j12;
+			}
+		}
+	}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+	
+	a13=200;	
+	for(j16=0;j16<i+1;j16++)
+	{
+		if(j16!=g3 && j16!=0 && j16!=gec && j16!=ge && j16!=g && j16!=g4 && j16!=g5 && j16!=g6 && j16!=g7 && j16!=g8 && j16!=g9 && j16!=g10 && j16!=g11 && j16!=g12 && j16!=g13 && j16!=g14 && j16!=g15)
+		{
+			if(a13>a[dizi[g15]] [dizi[j16]] )
+			{
+				a13=a[dizi[g15]] [dizi[j16]];
+				g16=j16;
+			}
+		}
+	}
+	
+	a14=200;	
+	for(j17=0;j17<i+1;j17++)
+	{
+		if(j17!=g3 && j17!=0 && j17!=gec && j17!=ge && j17!=g && j17!=g4 && j17!=g5 && j17!=g6 && j17!=g7 && j17!=g8 && j17!=g9 && j17!=g10 && j17!=g11 && j17!=g12 && j17!=g13 && j17!=g14 && j17!=g15 && j17!=g16)
+		{
+			if(a14>a[dizi[g16]] [dizi[j17]] )
+			{
+				a14=a[dizi[g16]] [dizi[j17]];
+				g17=j17;
+			}
+		}
+	}
+	
+	
+	a1=200;
+	for(j18=0; j18<i+1; j18++)
+	{
+		if(j18!=g3 && j18!=0 && j18!=gec && j18!=ge && j18!=g && j18!=g4 && j18!=g5 && j18!=g6 && j18!=g7 && j18!=g8 && j18!=g9 && j18!=g10 && j18!=g11 && j18!=g12 && j18!=g13 && j18!=g14 && j18!=g15 && j18!=g16 && j18!=g17)
+		{
+			if(a1>a[dizi[g17]] [dizi[j18]])
+			{
+				a1=a[dizi[g17]] [dizi[j18]];
+				g18=j18;
+			}
+		}
+	}
+	a2=200;
+	for(j19=0; j19<i+1; j19++)
+	{
+		if(j19!=g3 && j19!=0 && j19!=gec && j19!=ge && j19!=g && j19!=g4 && j19!=g5 && j19!=g6 && j19!=g7 && j19!=g8 && j19!=g9 && j19!=g10 && j19!=g11 && j19!=g12 && j19!=g13 && j19!=g14 && j19!=g15 && j19!=g16 && j19!=g17 && j19!=g18)
+		{
+			if(a2>a[dizi[g18]] [dizi[j19]])
+			{
+				a2=a[dizi[g18]] [dizi[j19]];
+				g19=j19;
+			}
+		}
+	}
+	
+	y20=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11,a12+a13+a14+a1+a2;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],dizi[g16],dizi[g17],dizi[g18],dizi[g19],y20);
+
+}
+else if(i==21)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+			{
+				
+				if (q>a[dizi[0]] [dizi[j]])
+				{
+					q=a[dizi[0]] [dizi[j]];
+					g=j;
+				}
+			}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+	{
+		if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+		{
+			if(p>a[dizi[g10]] [dizi[j11]] )
+			{
+				p=a[dizi[g10]] [dizi[j11]];
+				g11=j11;
+			}
+		}
+	}		
+	
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+	{
+		if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+		{
+			if(o>a[dizi[g11]] [dizi[j12]] )
+			{
+				o=a[dizi[g11]] [dizi[j12]];
+				g12=j12;
+			}
+		}
+	}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+	a13=200;	
+	for(j16=0;j16<i+1;j16++)
+	{
+		if(j16!=g3 && j16!=0 && j16!=gec && j16!=ge && j16!=g && j16!=g4 && j16!=g5 && j16!=g6 && j16!=g7 && j16!=g8 && j16!=g9 && j16!=g10 && j16!=g11 && j16!=g12 && j16!=g13 && j16!=g14 && j16!=g15)
+		{
+			if(a13>a[dizi[g15]] [dizi[j16]] )
+			{
+				a13=a[dizi[g15]] [dizi[j16]];
+				g16=j16;
+			}
+		}
+	}
+	
+	a14=200;	
+	for(j17=0;j17<i+1;j17++)
+	{
+		if(j17!=g3 && j17!=0 && j17!=gec && j17!=ge && j17!=g && j17!=g4 && j17!=g5 && j17!=g6 && j17!=g7 && j17!=g8 && j17!=g9 && j17!=g10 && j17!=g11 && j17!=g12 && j17!=g13 && j17!=g14 && j17!=g15 && j17!=g16)
+		{
+			if(a14>a[dizi[g16]] [dizi[j17]] )
+			{
+				a14=a[dizi[g16]] [dizi[j17]];
+				g17=j17;
+			}
+		}
+	}
+	
+	
+	
+	a1=200;
+	for(j18=0; j18<i+1; j18++)
+	{
+		if(j18!=g3 && j18!=0 && j18!=gec && j18!=ge && j18!=g && j18!=g4 && j18!=g5 && j18!=g6 && j18!=g7 && j18!=g8 && j18!=g9 && j18!=g10 && j18!=g11 && j18!=g12 && j18!=g13 && j18!=g14 && j18!=g15 && j18!=g16 && j18!=g17)
+		{
+			if(a1>a[dizi[g17]] [dizi[j18]])
+			{
+				a1=a[dizi[g17]] [dizi[j18]];
+				g18=j18;
+			}
+		}
+	}
+
+	a2=200;
+	for(j19=0; j19<i+1; j19++)
+	{
+		if(j19!=g3 && j19!=0 && j19!=gec && j19!=ge && j19!=g && j19!=g4 && j19!=g5 && j19!=g6 && j19!=g7 && j19!=g8 && j19!=g9 && j19!=g10 && j19!=g11 && j19!=g12 && j19!=g13 && j19!=g14 && j19!=g15 && j19!=g16 && j19!=g17 && j19!=g18)
+		{
+			if(a2>a[dizi[g18]] [dizi[j19]])
+			{
+				a2=a[dizi[g18]] [dizi[j19]];
+				g19=j19;
+			}
+		}
+	}
+	
+	a3=200;
+	for(j20=0; j20<i+1; j20++)
+	{
+		if(j20!=g3 && j20!=0 && j20!=gec && j20!=ge && j20!=g && j20!=g4 && j20!=g5 && j20!=g6 && j20!=g7 && j20!=g8 && j20!=g9 && j20!=g10 && j20!=g11 && j20!=g12 && j20!=g13 && j20!=g14 && j20!=g15 && j20!=g16 && j20!=g17 && j20!=g18 && j20!=g19)
+		{
+			if(a3>a[dizi[g19]] [dizi[j20]])
+			{
+				a3=a[dizi[g19]] [dizi[j20]];
+				g20=j20;
+			}
+		}
+	}
+	y21=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11,a12+a13+a14+a1+a2+a3;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],dizi[g16],dizi[g17],dizi[g18],dizi[g19],dizi[g20],y21);
+
+}
+
+else if(i==22)
+{	
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+	{
+		if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+		{
+			if(t>a[dizi[g7]] [dizi[j8]] )
+			{
+				t=a[dizi[g7]] [dizi[j8]];
+				g8=j8;
+			}
+		}
+	}		
+	
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+	{
+		if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+		{
+			if(s>a[dizi[g8]] [dizi[j9]] )
+			{
+				s=a[dizi[g8]] [dizi[j9]];
+				g9=j9;
+			}
+		}
+	}		
+	
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+	{
+		if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+		{
+			if(r>a[dizi[g9]] [dizi[j10]] )
+			{
+				r=a[dizi[g9]] [dizi[j10]];
+				g10=j10;
+			}
+		}
+	}		
+
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+	{
+		if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+		{
+			if(p>a[dizi[g10]] [dizi[j11]] )
+			{
+				p=a[dizi[g10]] [dizi[j11]];
+				g11=j11;
+			}
+		}
+	}		
+	
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+	{
+		if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+		{
+			if(o>a[dizi[g11]] [dizi[j12]] )
+			{
+				o=a[dizi[g11]] [dizi[j12]];
+				g12=j12;
+			}
+		}
+	}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+	
+	a13=200;	
+	for(j16=0;j16<i+1;j16++)
+	{
+		if(j16!=g3 && j16!=0 && j16!=gec && j16!=ge && j16!=g && j16!=g4 && j16!=g5 && j16!=g6 && j16!=g7 && j16!=g8 && j16!=g9 && j16!=g10 && j16!=g11 && j16!=g12 && j16!=g13 && j16!=g14 && j16!=g15)
+		{
+			if(a13>a[dizi[g15]] [dizi[j16]] )
+			{
+				a13=a[dizi[g15]] [dizi[j16]];
+				g16=j16;
+			}
+		}
+	}
+	
+	a14=200;	
+	for(j17=0;j17<i+1;j17++)
+	{
+		if(j17!=g3 && j17!=0 && j17!=gec && j17!=ge && j17!=g && j17!=g4 && j17!=g5 && j17!=g6 && j17!=g7 && j17!=g8 && j17!=g9 && j17!=g10 && j17!=g11 && j17!=g12 && j17!=g13 && j17!=g14 && j17!=g15 && j17!=g16)
+		{
+			if(a14>a[dizi[g16]] [dizi[j17]] )
+			{
+				a14=a[dizi[g16]] [dizi[j17]];
+				g17=j17;
+			}
+		}
+	}
+	
+	a1=200;
+	for(j18=0; j18<i+1; j18++)
+	{
+		if(j18!=g3 && j18!=0 && j18!=gec && j18!=ge && j18!=g && j18!=g4 && j18!=g5 && j18!=g6 && j18!=g7 && j18!=g8 && j18!=g9 && j18!=g10 && j18!=g11 && j18!=g12 && j18!=g13 && j18!=g14 && j18!=g15 && j18!=g16 && j18!=g17)
+		{
+			if(a1>a[dizi[g17]] [dizi[j18]])
+			{
+				a1=a[dizi[g17]] [dizi[j18]];
+				g18=j18;
+			}
+		}
+	}
+
+	a2=200;
+	for(j19=0; j19<i+1; j19++)
+	{
+		if(j19!=g3 && j19!=0 && j19!=gec && j19!=ge && j19!=g && j19!=g4 && j19!=g5 && j19!=g6 && j19!=g7 && j19!=g8 && j19!=g9 && j19!=g10 && j19!=g11 && j19!=g12 && j19!=g13 && j19!=g14 && j19!=g15 && j19!=g16 && j19!=g17 && j19!=g18)
+		{
+			if(a2>a[dizi[g18]] [dizi[j19]])
+			{
+				a2=a[dizi[g18]] [dizi[j19]];
+				g19=j19;
+			}	
+		}
+	}
+
+	a3=200;
+	for(j20=0; j20<i+1; j20++)
+	{
+		if(j20!=g3 && j20!=0 && j20!=gec && j20!=ge && j20!=g && j20!=g4 && j20!=g5 && j20!=g6 && j20!=g7 && j20!=g8 && j20!=g9 && j20!=g10 && j20!=g11 && j20!=g12 && j20!=g13 && j20!=g14 && j20!=g15 && j20!=g16 && j20!=g17 && j20!=g18 && j20!=g19)
+		{
+			if(a3>a[dizi[g19]] [dizi[j20]])
+			{
+				a3=a[dizi[g19]] [dizi[j20]];
+				g20=j20;
+			}
+		}
+	}
+
+	a4=200;
+	for(j21=0; j21<i+1; j21++)
+	{
+		if(j21!=g3 && j21!=0 && j21!=gec && j21!=ge && j21!=g && j21!=g4 && j21!=g5 && j21!=g6 && j21!=g7 && j21!=g8 && j21!=g9 && j21!=g10 && j21!=g11 && j21!=g12 && j21!=g13 && j21!=g14 && j21!=g15 && j21!=g16 && j21!=g17 && j21!=g18 && j21!=g19 && j21!=g20)
+		{
+			if(a4>a[dizi[g20]] [dizi[j21]])
+			{
+				a4=a[dizi[g20]] [dizi[j21]];
+				g21=j21;
+			}
+		}
+	}
+	y22=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11,a12+a13+a14+a1+a2+a3+a4;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],dizi[g16],dizi[g17],dizi[g18],dizi[g19],dizi[g20],dizi[g21],y22);
+
+}
+
+else if(i==23)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+	{
+		if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+		{
+			if(k>a[dizi[gec]] [dizi[j3]] )
+			{
+				k=a[dizi[gec]] [dizi[j3]];
+				g3=j3;
+			}
+		}
+	}
+	
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+	{
+		if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+		{
+			if(w>a[dizi[g3]] [dizi[j4]] )
+			{
+				w=a[dizi[g3]] [dizi[j4]];
+				g4=j4;
+			}
+		}
+	}	
+	
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+	{
+		if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+		{
+			if(z>a[dizi[g4]] [dizi[j5]] )
+			{
+				z=a[dizi[g4]] [dizi[j5]];
+				g5=j5;
+			}
+		}
+	}	
+
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+	{
+		if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+		{
+			if(v>a[dizi[g5]] [dizi[j6]] )
+			{
+				v=a[dizi[g5]] [dizi[j6]];
+				g6=j6;
+			}
+		}
+	}	
+
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+	{
+		if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+		{
+			if(u>a[dizi[g6]] [dizi[j7]] )
+			{
+				u=a[dizi[g6]] [dizi[j7]];
+				g7=j7;
+			}
+		}
+	}			
+
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+		{
+			if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+			{
+				if(t>a[dizi[g7]] [dizi[j8]] )
+				{
+					t=a[dizi[g7]] [dizi[j8]];
+					g8=j8;
+				}
+			}
+		}		
+		
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+		{
+			if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+			{
+				if(s>a[dizi[g8]] [dizi[j9]] )
+				{
+					s=a[dizi[g8]] [dizi[j9]];
+					g9=j9;
+				}
+			}
+		}		
+		
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+		{
+			if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+			{
+				if(r>a[dizi[g9]] [dizi[j10]] )
+				{
+					r=a[dizi[g9]] [dizi[j10]];
+					g10=j10;
+				}
+			}
+		}		
+	
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+		{
+			if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+			{
+				if(p>a[dizi[g10]] [dizi[j11]] )
+				{
+					p=a[dizi[g10]] [dizi[j11]];
+					g11=j11;
+				}
+			}
+		}		
+		
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+		{
+			if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+			{
+				if(o>a[dizi[g11]] [dizi[j12]] )
+				{
+					o=a[dizi[g11]] [dizi[j12]];
+					g12=j12;
+				}
+			}
+		}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+	
+	a13=200;	
+	for(j16=0;j16<i+1;j16++)
+	{
+		if(j16!=g3 && j16!=0 && j16!=gec && j16!=ge && j16!=g && j16!=g4 && j16!=g5 && j16!=g6 && j16!=g7 && j16!=g8 && j16!=g9 && j16!=g10 && j16!=g11 && j16!=g12 && j16!=g13 && j16!=g14 && j16!=g15)
+		{
+			if(a13>a[dizi[g15]] [dizi[j16]] )
+			{
+				a13=a[dizi[g15]] [dizi[j16]];
+				g16=j16;
+			}
+		}
+	}
+	
+	a14=200;	
+	for(j17=0;j17<i+1;j17++)
+	{
+		if(j17!=g3 && j17!=0 && j17!=gec && j17!=ge && j17!=g && j17!=g4 && j17!=g5 && j17!=g6 && j17!=g7 && j17!=g8 && j17!=g9 && j17!=g10 && j17!=g11 && j17!=g12 && j17!=g13 && j17!=g14 && j17!=g15 && j17!=g16)
+		{
+			if(a14>a[dizi[g16]] [dizi[j17]] )
+			{
+				a14=a[dizi[g16]] [dizi[j17]];
+				g17=j17;
+			}
+		}
+	}
+	
+		
+		
+	a1=200;
+	for(j18=0; j18<i+1; j18++)
+	{
+		if(j18!=g3 && j18!=0 && j18!=gec && j18!=ge && j18!=g && j18!=g4 && j18!=g5 && j18!=g6 && j18!=g7 && j18!=g8 && j18!=g9 && j18!=g10 && j18!=g11 && j18!=g12 && j18!=g13 && j18!=g14 && j18!=g15 && j18!=g16 && j18!=g17)
+		{
+			if(a1>a[dizi[g17]] [dizi[j18]])
+			{
+				a1=a[dizi[g17]] [dizi[j18]];
+				g18=j18;
+			}
+		}
+	}
+	
+	a2=200;
+	for(j19=0; j19<i+1; j19++)
+	{
+		if(j19!=g3 && j19!=0 && j19!=gec && j19!=ge && j19!=g && j19!=g4 && j19!=g5 && j19!=g6 && j19!=g7 && j19!=g8 && j19!=g9 && j19!=g10 && j19!=g11 && j19!=g12 && j19!=g13 && j19!=g14 && j19!=g15 && j19!=g16 && j19!=g17 && j19!=g18)
+		{
+			if(a2>a[dizi[g18]] [dizi[j19]])
+			{
+				a2=a[dizi[g18]] [dizi[j19]];
+				g19=j19;
+			}
+		}
+	}
+	
+	a3=200;
+	for(j20=0; j20<i+1; j20++)
+	{
+		if(j20!=g3 && j20!=0 && j20!=gec && j20!=ge && j20!=g && j20!=g4 && j20!=g5 && j20!=g6 && j20!=g7 && j20!=g8 && j20!=g9 && j20!=g10 && j20!=g11 && j20!=g12 && j20!=g13 && j20!=g14 && j20!=g15 && j20!=g16 && j20!=g17 && j20!=g18 && j20!=g19)
+		{
+			if(a3>a[dizi[g19]] [dizi[j20]])
+			{
+				a3=a[dizi[g19]] [dizi[j20]];
+				g20=j20;
+			}
+		}
+	}
+	
+	a4=200;
+	for(j21=0; j21<i+1; j21++)
+	{
+		if(j21!=g3 && j21!=0 && j21!=gec && j21!=ge && j21!=g && j21!=g4 && j21!=g5 && j21!=g6 && j21!=g7 && j21!=g8 && j21!=g9 && j21!=g10 && j21!=g11 && j21!=g12 && j21!=g13 && j21!=g14 && j21!=g15 && j21!=g16 && j21!=g17 && j21!=g18 && j21!=g19 && j21!=g20)
+		{
+			if(a4>a[dizi[g20]] [dizi[j21]])
+			{
+				a4=a[dizi[g20]] [dizi[j21]];
+				g21=j21;
+			}
+		}
+	}
+	
+	a5=200;
+	for(j22=0;j22<i+1;j22++)
+	{
+		if(j22!=g3 && j22!=0 && j22!=gec && j22!=ge && j22!=g && j22!=g4 && j22!=g5 && j22!=g6 && j22!=g7 && j22!=g8 && j22!=g9 && j22!=g10 && j22!=g11 && j22!=g12 && j22!=g13 && j22!=g14 && j22!=g15 && j22!=g16 && j22!=g17 && j22!=g18 && j22!=g19 && j22!=g20 && j22!=g21)
+		{
+			if(a5>a[dizi[g21]] [dizi[j22]])
+			{
+				a5=a[dizi[g21]] [dizi[j22]];
+				g22=j22;
+			}
+		}
+	}
+		y23=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11,a12+a13+a14+a1+a2+a3+a4+a5;
+		printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],dizi[g16],dizi[g17],dizi[g18],dizi[g19],dizi[g20],dizi[g21],dizi[g22],y23);
+	
+}
+
+else if(i==24)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+				
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+				n=a[dizi[g]] [dizi[je]];
+				ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+	
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+		{
+			if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+			{
+				if(k>a[dizi[gec]] [dizi[j3]] )
+				{
+					k=a[dizi[gec]] [dizi[j3]];
+					g3=j3;
+				}
+			}
+		}
+		
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+		{
+			if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+			{
+				if(w>a[dizi[g3]] [dizi[j4]] )
+				{
+					w=a[dizi[g3]] [dizi[j4]];
+					g4=j4;
+				}
+			}
+		}	
+		
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+		{
+			if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+			{
+				if(z>a[dizi[g4]] [dizi[j5]] )
+				{
+					z=a[dizi[g4]] [dizi[j5]];
+					g5=j5;
+				}
+			}
+		}	
+	
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+		{
+			if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+			{
+				if(v>a[dizi[g5]] [dizi[j6]] )
+				{
+					v=a[dizi[g5]] [dizi[j6]];
+					g6=j6;
+				}
+			}
+		}	
+	
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+		{
+			if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+			{
+				if(u>a[dizi[g6]] [dizi[j7]] )
+				{
+					u=a[dizi[g6]] [dizi[j7]];
+					g7=j7;
+				}
+			}
+		}			
+	
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+		{
+			if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+			{
+				if(t>a[dizi[g7]] [dizi[j8]] )
+				{
+					t=a[dizi[g7]] [dizi[j8]];
+					g8=j8;
+				}
+			}
+		}		
+		
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+		{
+			if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+			{
+				if(s>a[dizi[g8]] [dizi[j9]] )
+				{
+					s=a[dizi[g8]] [dizi[j9]];
+					g9=j9;
+				}
+			}
+		}		
+		
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+		{
+			if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+			{
+				if(r>a[dizi[g9]] [dizi[j10]] )
+				{
+					r=a[dizi[g9]] [dizi[j10]];
+					g10=j10;
+				}
+			}
+		}		
+	
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+		{
+			if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+			{
+				if(p>a[dizi[g10]] [dizi[j11]] )
+				{
+					p=a[dizi[g10]] [dizi[j11]];
+					g11=j11;
+				}
+			}
+		}		
+		
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+		{
+			if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+			{
+				if(o>a[dizi[g11]] [dizi[j12]] )
+				{
+					z=a[dizi[g11]] [dizi[j12]];
+					g12=j12;
+				}
+			}
+		}	
+		
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+	
+	a13=200;	
+	for(j16=0;j16<i+1;j16++)
+	{
+		if(j16!=g3 && j16!=0 && j16!=gec && j16!=ge && j16!=g && j16!=g4 && j16!=g5 && j16!=g6 && j16!=g7 && j16!=g8 && j16!=g9 && j16!=g10 && j16!=g11 && j16!=g12 && j16!=g13 && j16!=g14 && j16!=g15)
+		{
+			if(a13>a[dizi[g15]] [dizi[j16]] )
+			{
+				a13=a[dizi[g15]] [dizi[j16]];
+				g16=j16;
+			}
+		}
+	}
+	
+	a14=200;	
+	for(j17=0;j17<i+1;j17++)
+	{
+		if(j17!=g3 && j17!=0 && j17!=gec && j17!=ge && j17!=g && j17!=g4 && j17!=g5 && j17!=g6 && j17!=g7 && j17!=g8 && j17!=g9 && j17!=g10 && j17!=g11 && j17!=g12 && j17!=g13 && j17!=g14 && j17!=g15 && j17!=g16)
+		{
+			if(a14>a[dizi[g16]] [dizi[j17]] )
+			{
+				a14=a[dizi[g16]] [dizi[j17]];
+				g17=j17;
+			}
+		}
+	}
+	
+	a1=200;
+	for(j18=0; j18<i+1; j18++)
+	{
+		if(j18!=g3 && j18!=0 && j18!=gec && j18!=ge && j18!=g && j18!=g4 && j18!=g5 && j18!=g6 && j18!=g7 && j18!=g8 && j18!=g9 && j18!=g10 && j18!=g11 && j18!=g12 && j18!=g13 && j18!=g14 && j18!=g15 && j18!=g16 && j18!=g17)
+		{
+			if(a1>a[dizi[g17]] [dizi[j18]])
+			{
+				a1=a[dizi[g17]] [dizi[j18]];
+				g18=j18;
+			}
+		}
+	}
+	
+	a2=200;
+	for(j19=0; j19<i+1; j19++)
+	{
+		if(j19!=g3 && j19!=0 && j19!=gec && j19!=ge && j19!=g && j19!=g4 && j19!=g5 && j19!=g6 && j19!=g7 && j19!=g8 && j19!=g9 && j19!=g10 && j19!=g11 && j19!=g12 && j19!=g13 && j19!=g14 && j19!=g15 && j19!=g16 && j19!=g17 && j19!=g18)
+		{
+			if(a2>a[dizi[g18]] [dizi[j19]])
+			{
+				a2=a[dizi[g18]] [dizi[j19]];
+				g19=j19;
+			}
+		}
+	}
+	
+	a3=200;
+	for(j20=0; j20<i+1; j20++)
+	{
+		if(j20!=g3 && j20!=0 && j20!=gec && j20!=ge && j20!=g && j20!=g4 && j20!=g5 && j20!=g6 && j20!=g7 && j20!=g8 && j20!=g9 && j20!=g10 && j20!=g11 && j20!=g12 && j20!=g13 && j20!=g14 && j20!=g15 && j20!=g16 && j20!=g17 && j20!=g18 && j20!=g19)
+		{
+			if(a3>a[dizi[g19]] [dizi[j20]])
+			{
+				a3=a[dizi[g19]] [dizi[j20]];
+				g20=j20;
+			}
+		}
+	}
+	
+	a4=200;
+	for(j21=0; j21<i+1; j21++)
+	{
+		if(j21!=g3 && j21!=0 && j21!=gec && j21!=ge && j21!=g && j21!=g4 && j21!=g5 && j21!=g6 && j21!=g7 && j21!=g8 && j21!=g9 && j21!=g10 && j21!=g11 && j21!=g12 && j21!=g13 && j21!=g14 && j21!=g15 && j21!=g16 && j21!=g17 && j21!=g18 && j21!=g19 && j21!=g20)
+		{
+			if(a4>a[dizi[g20]] [dizi[j21]])
+			{
+				a4=a[dizi[g20]] [dizi[j21]];
+				g21=j21;
+			}
+		}
+	}
+	
+	a5=200;
+	for(j22=0;j22<i+1;j22++)
+	{
+		if(j22!=g3 && j22!=0 && j22!=gec && j22!=ge && j22!=g && j22!=g4 && j22!=g5 && j22!=g6 && j22!=g7 && j22!=g8 && j22!=g9 && j22!=g10 && j22!=g11 && j22!=g12 && j22!=g13 && j22!=g14 && j22!=g15 && j22!=g16 && j22!=g17 && j22!=g18 && j22!=g19 && j22!=g20 && j22!=g21)
+		{
+			if(a5>a[dizi[g21]] [dizi[j22]])
+			{
+				a5=a[dizi[g21]] [dizi[j22]];
+				g22=j22;
+			}
+		}
+	}
+	
+	a6=200;
+	for(j23=0; j23<i+1; j23++)
+	{
+		if(j23!=g3 && j23!=0 && j23!=gec && j23!=ge && j23!=g && j23!=g4 && j23!=g5 && j23!=g6 && j23!=g7 && j23!=g8 && j23!=g9 && j23!=g10 && j23!=g11 && j23!=g12 && j23!=g13 && j23!=g14 && j23!=g15 && j23!=g16 && j23!=g17 && j23!=g18 && j23!=g19 && j23!=g20 && j23!=g21 && j23!=g22)
+		{
+			if(a6>a[dizi[g22]] [dizi[j23]])
+			{
+				a6=a[dizi[g22]] [dizi[j23]];
+				g23=j23;
+			}
+		}
+	}
+	y24=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11,a12+a13+a14+a1+a2+a3+a4+a5+a6;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],dizi[g16],dizi[g17],dizi[g18],dizi[g19],dizi[g20],dizi[g21],dizi[g22],dizi[g23],y24);
+	}
+
+else if(i==25)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+				
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+		{
+			if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+			{
+				if(k>a[dizi[gec]] [dizi[j3]] )
+				{
+					k=a[dizi[gec]] [dizi[j3]];
+					g3=j3;
+				}
+			}
+		}
+		
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+		{
+			if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+			{
+				if(w>a[dizi[g3]] [dizi[j4]] )
+				{
+					w=a[dizi[g3]] [dizi[j4]];
+					g4=j4;
+				}
+			}
+		}	
+		
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+		{
+			if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+			{
+				if(z>a[dizi[g4]] [dizi[j5]] )
+				{
+					z=a[dizi[g4]] [dizi[j5]];
+					g5=j5;
+				}
+			}
+		}	
+	
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+		{
+			if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+			{
+				if(v>a[dizi[g5]] [dizi[j6]] )
+				{
+					v=a[dizi[g5]] [dizi[j6]];
+					g6=j6;
+				}
+			}
+		}	
+	
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+		{
+			if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+			{
+				if(u>a[dizi[g6]] [dizi[j7]] )
+				{
+					u=a[dizi[g6]] [dizi[j7]];
+					g7=j7;
+				}
+			}
+		}			
+	
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+		{
+			if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+			{
+				if(t>a[dizi[g7]] [dizi[j8]] )
+				{
+					t=a[dizi[g7]] [dizi[j8]];
+					g8=j8;
+				}
+			}
+		}		
+		
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+		{
+			if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+			{
+				if(s>a[dizi[g8]] [dizi[j9]] )
+				{
+					s=a[dizi[g8]] [dizi[j9]];
+					g9=j9;
+				}
+			}
+		}		
+		
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+		{
+			if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+			{
+				if(r>a[dizi[g9]] [dizi[j10]] )
+				{
+					r=a[dizi[g9]] [dizi[j10]];
+					g10=j10;
+				}
+			}
+		}		
+	
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+		{
+			if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+			{
+				if(p>a[dizi[g10]] [dizi[j11]] )
+				{
+					p=a[dizi[g10]] [dizi[j11]];
+					g11=j11;
+				}
+			}
+		}		
+		
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+		{
+			if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+			{
+				if(o>a[dizi[g11]] [dizi[j12]] )
+				{
+					o=a[dizi[g11]] [dizi[j12]];
+					g12=j12;
+				}
+			}
+		}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(m>a[dizi[g13]] [dizi[j14]] )
+			{
+				m=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+	
+	a13=200;	
+	for(j16=0;j16<i+1;j16++)
+	{
+		if(j16!=g3 && j16!=0 && j16!=gec && j16!=ge && j16!=g && j16!=g4 && j16!=g5 && j16!=g6 && j16!=g7 && j16!=g8 && j16!=g9 && j16!=g10 && j16!=g11 && j16!=g12 && j16!=g13 && j16!=g14 && j16!=g15)
+		{
+			if(a13>a[dizi[g15]] [dizi[j16]] )
+			{
+				a13=a[dizi[g15]] [dizi[j16]];
+				g16=j16;
+			}
+		}
+	}
+	
+	a14=200;	
+	for(j17=0;j17<i+1;j17++)
+	{
+		if(j17!=g3 && j17!=0 && j17!=gec && j17!=ge && j17!=g && j17!=g4 && j17!=g5 && j17!=g6 && j17!=g7 && j17!=g8 && j17!=g9 && j17!=g10 && j17!=g11 && j17!=g12 && j17!=g13 && j17!=g14 && j17!=g15 && j17!=g16)
+		{
+			if(a14>a[dizi[g16]] [dizi[j17]] )
+			{
+				a14=a[dizi[g16]] [dizi[j17]];
+				g17=j17;
+			}
+		}
+	}
+	
+	a1=200;
+	for(j18=0; j18<i+1; j18++)
+	{
+	if(j18!=g3 && j18!=0 && j18!=gec && j18!=ge && j18!=g && j18!=g4 && j18!=g5 && j18!=g6 && j18!=g7 && j18!=g8 && j18!=g9 && j18!=g10 && j18!=g11 && j18!=g12 && j18!=g13 && j18!=g14 && j18!=g15 && j18!=g16 && j18!=g17)
+	{
+		if(a1>a[dizi[g17]] [dizi[j18]])
+		{
+			a1=a[dizi[g17]] [dizi[j18]];
+			g18=j18;
+		}
+	}
+}
+
+	a2=200;
+	for(j19=0; j19<i+1; j19++)
+	{
+		if(j19!=g3 && j19!=0 && j19!=gec && j19!=ge && j19!=g && j19!=g4 && j19!=g5 && j19!=g6 && j19!=g7 && j19!=g8 && j19!=g9 && j19!=g10 && j19!=g11 && j19!=g12 && j19!=g13 && j19!=g14 && j19!=g15 && j19!=g16 && j19!=g17 && j19!=g18)
+		{
+			if(a2>a[dizi[g18]] [dizi[j19]])
+			{
+				a2=a[dizi[g18]] [dizi[j19]];
+				g19=j19;
+			}
+		}
+	}
+	
+	a3=200;
+	for(j20=0; j20<i+1; j20++)
+	{
+		if(j20!=g3 && j20!=0 && j20!=gec && j20!=ge && j20!=g && j20!=g4 && j20!=g5 && j20!=g6 && j20!=g7 && j20!=g8 && j20!=g9 && j20!=g10 && j20!=g11 && j20!=g12 && j20!=g13 && j20!=g14 && j20!=g15 && j20!=g16 && j20!=g17 && j20!=g18 && j20!=g19)
+		{
+			if(a3>a[dizi[g19]] [dizi[j20]])
+			{
+				a3=a[dizi[g19]] [dizi[j20]];
+				g20=j20;
+			}
+		}
+	}
+	
+	a4=200;
+	for(j21=0; j21<i+1; j21++)
+	{
+		if(j21!=g3 && j21!=0 && j21!=gec && j21!=ge && j21!=g && j21!=g4 && j21!=g5 && j21!=g6 && j21!=g7 && j21!=g8 && j21!=g9 && j21!=g10 && j21!=g11 && j21!=g12 && j21!=g13 && j21!=g14 && j21!=g15 && j21!=g16 && j21!=g17 && j21!=g18 && j21!=g19 && j21!=g20)
+		{
+			if(a4>a[dizi[g20]] [dizi[j21]])
+			{
+				a4=a[dizi[g20]] [dizi[j21]];
+				g21=j21;
+			}
+		}
+	}
+	
+	a5=200;
+	for(j22=0;j22<i+1;j22++)
+	{
+		if(j22!=g3 && j22!=0 && j22!=gec && j22!=ge && j22!=g && j22!=g4 && j22!=g5 && j22!=g6 && j22!=g7 && j22!=g8 && j22!=g9 && j22!=g10 && j22!=g11 && j22!=g12 && j22!=g13 && j22!=g14 && j22!=g15 && j22!=g16 && j22!=g17 && j22!=g18 && j22!=g19 && j22!=g20 && j22!=g21)
+		{
+			if(a5>a[dizi[g21]] [dizi[j22]])
+			{
+				a5=a[dizi[g21]] [dizi[j22]];
+				g22=j22;
+			}
+		}
+	}
+	
+	a6=200;
+	for(j23=0; j23<i+1; j23++)
+	{
+		if(j23!=g3 && j23!=0 && j23!=gec && j23!=ge && j23!=g && j23!=g4 && j23!=g5 && j23!=g6 && j23!=g7 && j23!=g8 && j23!=g9 && j23!=g10 && j23!=g11 && j23!=g12 && j23!=g13 && j23!=g14 && j23!=g15 && j23!=g16 && j23!=g17 && j23!=g18 && j23!=g19 && j23!=g20 && j23!=g21 && j23!=g22)
+		{
+			if(a6>a[dizi[g22]] [dizi[j23]])
+			{
+				a6=a[dizi[g22]] [dizi[j23]];
+				g23=j23;
+			}
+		}
+	}
+	
+	a7=200;
+	for(j24=0; j24<i+1; j24++)
+	{
+		if(j24!=g3 && j24!=0 && j24!=gec && j24!=ge && j24!=g && j24!=g4 && j24!=g5 && j24!=g6 && j24!=g7 && j24!=g8 && j24!=g9 && j24!=g10 && j24!=g11 && j24!=g12 && j24!=g13 && j24!=g14 && j24!=g15 && j24!=g16 && j24!=g17 && j24!=g18 && j24!=g19 && j24!=g20 && j24!=g21 && j24!=g22 && j24!=g23)
+		{
+			if(a7>a[dizi[g23]] [dizi[j24]])
+			{
+				a7=a[dizi[g23]] [dizi[j24]];
+				g24=j24;
+			}
+		}
+	}
+	y25=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11,a12+a13+a14+a1+a2+a3+a4+a5+a6+a7;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],dizi[g16],dizi[g17],dizi[g18],dizi[g19],dizi[g20],dizi[g21],dizi[g22],dizi[g23],dizi[g24],y25);
+
+}
+
+else if(i==26)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+		{
+			if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+			{
+				if(k>a[dizi[gec]] [dizi[j3]] )
+				{
+					k=a[dizi[gec]] [dizi[j3]];
+					g3=j3;
+				}
+			}
+		}
+		
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+		{
+			if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+			{
+				if(w>a[dizi[g3]] [dizi[j4]] )
+				{
+					w=a[dizi[g3]] [dizi[j4]];
+					g4=j4;
+				}
+			}
+		}	
+		
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+		{
+			if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+			{
+				if(z>a[dizi[g4]] [dizi[j5]] )
+				{
+					z=a[dizi[g4]] [dizi[j5]];
+					g5=j5;
+				}
+			}
+		}	
+	
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+		{
+			if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+			{
+				if(v>a[dizi[g5]] [dizi[j6]] )
+				{
+					v=a[dizi[g5]] [dizi[j6]];
+					g6=j6;
+				}
+			}
+		}	
+	
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+		{
+			if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+			{
+				if(u>a[dizi[g6]] [dizi[j7]] )
+				{
+					u=a[dizi[g6]] [dizi[j7]];
+					g7=j7;
+				}
+			}
+		}			
+	
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+		{
+			if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+			{
+				if(t>a[dizi[g7]] [dizi[j8]] )
+				{
+					t=a[dizi[g7]] [dizi[j8]];
+					g8=j8;
+				}
+			}
+		}		
+		
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+		{
+			if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+			{
+				if(s>a[dizi[g8]] [dizi[j9]] )
+				{
+					s=a[dizi[g8]] [dizi[j9]];
+					g9=j9;
+				}
+			}
+		}		
+		
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+		{
+			if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+			{
+				if(r>a[dizi[g9]] [dizi[j10]] )
+				{
+					r=a[dizi[g9]] [dizi[j10]];
+					g10=j10;
+				}
+			}
+		}		
+	
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+		{
+			if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+			{
+				if(p>a[dizi[g10]] [dizi[j11]] )
+				{
+					p=a[dizi[g10]] [dizi[j11]];
+					g11=j11;
+				}
+			}
+		}		
+		
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+		{
+			if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+			{
+				if(o>a[dizi[g11]] [dizi[j12]] )
+				{
+					o=a[dizi[g11]] [dizi[j12]];
+					g12=j12;
+				}
+			}
+		}	
+		
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+	
+	a13=200;	
+	for(j16=0;j16<i+1;j16++)
+	{
+		if(j16!=g3 && j16!=0 && j16!=gec && j16!=ge && j16!=g && j16!=g4 && j16!=g5 && j16!=g6 && j16!=g7 && j16!=g8 && j16!=g9 && j16!=g10 && j16!=g11 && j16!=g12 && j16!=g13 && j16!=g14 && j16!=g15)
+		{
+			if(a13>a[dizi[g15]] [dizi[j16]] )
+			{
+				a13=a[dizi[g15]] [dizi[j16]];
+				g16=j16;
+			}
+		}
+	}
+	
+	a14=200;	
+	for(j17=0;j17<i+1;j17++)
+	{
+		if(j17!=g3 && j17!=0 && j17!=gec && j17!=ge && j17!=g && j17!=g4 && j17!=g5 && j17!=g6 && j17!=g7 && j17!=g8 && j17!=g9 && j17!=g10 && j17!=g11 && j17!=g12 && j17!=g13 && j17!=g14 && j17!=g15 && j17!=g16)
+		{
+			if(m>a[dizi[g16]] [dizi[j17]] )
+			{
+				m=a[dizi[g16]] [dizi[j17]];
+				g17=j17;
+			}
+		}
+	}
+	
+	a1=200;
+	for(j18=0; j18<i+1; j18++)
+	{
+		if(j18!=g3 && j18!=0 && j18!=gec && j18!=ge && j18!=g && j18!=g4 && j18!=g5 && j18!=g6 && j18!=g7 && j18!=g8 && j18!=g9 && j18!=g10 && j18!=g11 && j18!=g12 && j18!=g13 && j18!=g14 && j18!=g15 && j18!=g16 && j18!=g17)
+		{
+			if(a1>a[dizi[g17]] [dizi[j18]])
+			{
+				a1=a[dizi[g17]] [dizi[j18]];
+				g18=j18;
+			}
+		}
+	}
+	
+	a2=200;
+	for(j19=0; j19<i+1; j19++)
+	{
+		if(j19!=g3 && j19!=0 && j19!=gec && j19!=ge && j19!=g && j19!=g4 && j19!=g5 && j19!=g6 && j19!=g7 && j19!=g8 && j19!=g9 && j19!=g10 && j19!=g11 && j19!=g12 && j19!=g13 && j19!=g14 && j19!=g15 && j19!=g16 && j19!=g17 && j19!=g18)
+		{
+			if(a2>a[dizi[g18]] [dizi[j19]])
+			{
+				a2=a[dizi[g18]] [dizi[j19]];
+				g19=j19;
+			}
+		}
+	}
+	
+	a3=200;
+	for(j20=0; j20<i+1; j20++)
+	{
+		if(j20!=g3 && j20!=0 && j20!=gec && j20!=ge && j20!=g && j20!=g4 && j20!=g5 && j20!=g6 && j20!=g7 && j20!=g8 && j20!=g9 && j20!=g10 && j20!=g11 && j20!=g12 && j20!=g13 && j20!=g14 && j20!=g15 && j20!=g16 && j20!=g17 && j20!=g18 && j20!=g19)
+		{
+			if(a3>a[dizi[g19]] [dizi[j20]])
+			{
+				a3=a[dizi[g19]] [dizi[j20]];
+				g20=j20;
+			}
+		}
+	}
+	
+	a4=200;
+	for(j21=0; j21<i+1; j21++)
+	{
+		if(j21!=g3 && j21!=0 && j21!=gec && j21!=ge && j21!=g && j21!=g4 && j21!=g5 && j21!=g6 && j21!=g7 && j21!=g8 && j21!=g9 && j21!=g10 && j21!=g11 && j21!=g12 && j21!=g13 && j21!=g14 && j21!=g15 && j21!=g16 && j21!=g17 && j21!=g18 && j21!=g19 && j21!=g20)
+		{
+			if(a4>a[dizi[g20]] [dizi[j21]])
+			{
+				a4=a[dizi[g20]] [dizi[j21]];
+				g21=j21;
+			}
+		}
+	}
+	
+	a5=200;
+	for(j22=0;j22<i+1;j22++)
+	{
+		if(j22!=g3 && j22!=0 && j22!=gec && j22!=ge && j22!=g && j22!=g4 && j22!=g5 && j22!=g6 && j22!=g7 && j22!=g8 && j22!=g9 && j22!=g10 && j22!=g11 && j22!=g12 && j22!=g13 && j22!=g14 && j22!=g15 && j22!=g16 && j22!=g17 && j22!=g18 && j22!=g19 && j22!=g20 && j22!=g21)
+		{
+			if(a5>a[dizi[g21]] [dizi[j22]])
+			{
+				a5=a[dizi[g21]] [dizi[j22]];
+				g22=j22;
+			}
+		}
+	}
+	
+	a6=200;
+	for(j23=0; j23<i+1; j23++)
+	{
+		if(j23!=g3 && j23!=0 && j23!=gec && j23!=ge && j23!=g && j23!=g4 && j23!=g5 && j23!=g6 && j23!=g7 && j23!=g8 && j23!=g9 && j23!=g10 && j23!=g11 && j23!=g12 && j23!=g13 && j23!=g14 && j23!=g15 && j23!=g16 && j23!=g17 && j23!=g18 && j23!=g19 && j23!=g20 && j23!=g21 && j23!=g22)
+		{
+			if(a6>a[dizi[g22]] [dizi[j23]])
+			{
+				a6=a[dizi[g22]] [dizi[j23]];
+				g23=j23;
+			}
+		}
+	}
+	
+	a7=200;
+	for(j24=0; j24<i+1; j24++)
+	{
+		if(j24!=g3 && j24!=0 && j24!=gec && j24!=ge && j24!=g && j24!=g4 && j24!=g5 && j24!=g6 && j24!=g7 && j24!=g8 && j24!=g9 && j24!=g10 && j24!=g11 && j24!=g12 && j24!=g13 && j24!=g14 && j24!=g15 && j24!=g16 && j24!=g17 && j24!=g18 && j24!=g19 && j24!=g20 && j24!=g21 && j24!=g22 && j24!=g23)
+		{
+			if(a7>a[dizi[g23]] [dizi[j24]])
+			{
+				a7=a[dizi[g23]] [dizi[j24]];
+				g24=j24;
+			}
+		}
+	}
+	
+	a8=200;
+	for(j25=0; j25<i+1; j25++)
+	{
+		if(j25!=g3 && j25!=0 && j25!=gec && j25!=ge && j25!=g && j25!=g4 && j25!=g5 && j25!=g6 && j25!=g7 && j25!=g8 && j25!=g9 && j25!=g10 && j25!=g11 && j25!=g12 && j25!=g13 && j25!=g14 && j25!=g15 && j25!=g16 && j25!=g17 && j25!=g18 && j25!=g19 && j25!=g20 && j25!=g21 && j25!=g22 && j25!=g23 && j25!=g24)
+		{
+			if(a8>a[dizi[g24]] [dizi[j25]])
+			{
+				a8=a[dizi[g24]] [dizi[j25]];
+				g25=j25;
+			}
+		}
+	}
+	y26=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11,a12+a13+a14+a1+a2+a3+a4+a5+a6+a7+a8;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],dizi[g16],dizi[g17],dizi[g18],dizi[g19],dizi[g20],dizi[g21],dizi[g22],dizi[g23],dizi[g24],dizi[g25],y26);
+
+}
+else if(i==27)
+{
+	q=200;
+	for(j=0;j<i+1;j++)
+	{ 
+		if(j!=0)
+		{
+			if (q>a[dizi[0]] [dizi[j]])
+			{
+				q=a[dizi[0]] [dizi[j]];
+				g=j;
+			}
+		}
+	}
+	
+	n=200;
+	for(je=0;je<i+1;je++)
+	{
+		if(je!=g && je!=0)
+		{
+			if(n>a[dizi[g]] [dizi[je]])
+			{
+			n=a[dizi[g]] [dizi[je]];
+			ge=je;	
+			}
+		}
+	}
+	
+	h=200;
+	for(jee=0;jee<i+1;jee++)
+	{
+		if(jee!=ge && jee!=g && jee!=0)
+		{
+			if(h>a[dizi[ge]] [dizi[jee]])
+			{
+				h=a[dizi[ge]] [dizi[jee]];
+				gec=jee;
+			}
+		}
+	}
+
+	k=200;
+	for(j3=0;j3<i+1;j3++)
+		{
+			if(j3!=gec && j3!=0 && j3!=ge && j3!=g )
+			{
+				if(k>a[dizi[gec]] [dizi[j3]] )
+				{
+					k=a[dizi[gec]] [dizi[j3]];
+					g3=j3;
+				}
+			}
+		}
+		
+	w=200;
+	for(j4=0;j4<i+1;j4++)
+		{
+			if(j4!=g3 && j4!=0 && j4!=gec && j4!=ge && j4!=g)
+			{
+				if(w>a[dizi[g3]] [dizi[j4]] )
+				{
+					w=a[dizi[g3]] [dizi[j4]];
+					g4=j4;
+				}
+			}
+		}	
+		
+	z=200;
+	for(j5=0;j5<i+1;j5++)
+		{
+			if(j5!=g3 && j5!=0 && j5!=gec && j5!=ge && j5!=g && j5!=g4)
+			{
+				if(z>a[dizi[g4]] [dizi[j5]] )
+				{
+					z=a[dizi[g4]] [dizi[j5]];
+					g5=j5;
+				}
+			}
+		}	
+	
+	v=200;
+	for(j6=0;j6<i+1;j6++)
+		{
+			if(j6!=g3 && j6!=0 && j6!=gec && j6!=ge && j6!=g && j6!=g4 && j6!=g5)
+			{
+				if(v>a[dizi[g5]] [dizi[j6]] )
+				{
+					v=a[dizi[g5]] [dizi[j6]];
+					g6=j6;
+				}
+			}
+		}	
+	
+	u=200;
+	for(j7=0;j7<i+1;j7++)
+		{
+			if(j7!=g3 && j7!=0 && j7!=gec && j7!=ge && j7!=g && j7!=g4 && j7!=g5 && j7!=g6)
+			{
+				if(u>a[dizi[g6]] [dizi[j7]] )
+				{
+					u=a[dizi[g6]] [dizi[j7]];
+					g7=j7;
+				}
+			}
+		}			
+	
+	t=200;
+	for(j8=0;j8<i+1;j8++)
+		{
+			if(j8!=g3 && j8!=0 && j8!=gec && j8!=ge && j8!=g && j8!=g4 && j8!=g5 && j8!=g6 && j8!=g7)
+			{
+				if(t>a[dizi[g7]] [dizi[j8]] )
+				{
+					t=a[dizi[g7]] [dizi[j8]];
+					g8=j8;
+				}
+			}
+		}		
+		
+	s=200;
+	for(j9=0;j9<i+1;j9++)
+		{
+			if(j9!=g3 && j9!=0 && j9!=gec && j9!=ge && j9!=g && j9!=g4 && j9!=g5 && j9!=g6 && j9!=g7 && j9!=g8)
+			{
+				if(s>a[dizi[g8]] [dizi[j9]] )
+				{
+					s=a[dizi[g8]] [dizi[j9]];
+					g9=j9;
+				}
+			}
+		}		
+		
+	r=200;
+	for(j10=0;j10<i+1;j10++)
+		{
+			if(j10!=g3 && j10!=0 && j10!=gec && j10!=ge && j10!=g && j10!=g4 && j10!=g5 && j10!=g6 && j10!=g7 && j10!=g8 && j10!=g9)
+			{
+				if(r>a[dizi[g9]] [dizi[j10]] )
+				{
+					r=a[dizi[g9]] [dizi[j10]];
+					g10=j10;
+				}
+			}
+		}		
+	
+	p=200;
+	for(j11=0;j11<i+1;j11++)
+		{
+			if(j11!=g3 && j11!=0 && j11!=gec && j11!=ge && j11!=g && j11!=g4 && j11!=g5 && j11!=g6 && j11!=g7 && j11!=g8 && j11!=g9 && j11!=g10 )
+			{
+				if(p>a[dizi[g10]] [dizi[j11]] )
+				{
+					p=a[dizi[g10]] [dizi[j11]];
+					g11=j11;
+				}
+			}
+		}		
+		
+	o=200;
+	for(j12=0;j12<i+1;j12++)
+		{
+			if(j12!=g3 && j12!=0 && j12!=gec && j12!=ge && j12!=g && j12!=g4 && j12!=g5 && j12!=g6 && j12!=g7 && j12!=g8 && j12!=g9 && j12!=g10 && j12!=g11)
+			{
+				if(o>a[dizi[g11]] [dizi[j12]] )
+				{
+					o=a[dizi[g11]] [dizi[j12]];
+					g12=j12;
+				}
+			}
+		}	
+	
+	m=200;
+	for(j13=0;j13<i+1;j13++)
+	{
+		if(j13!=g3 && j13!=0 && j13!=gec && j13!=ge && j13!=g && j13!=g4 && j13!=g5 && j13!=g6 && j13!=g7 && j13!=g8 && j13!=g9 && j13!=g10 && j13!=g11 && j13!=g12 )
+		{
+			if(m>a[dizi[g12]] [dizi[j13]] )
+			{
+				m=a[dizi[g12]] [dizi[j13]];
+				g13=j13;
+			}
+		}
+	}
+	
+	a11=200;	
+	for(j14=0;j14<i+1;j14++)
+	{
+		if(j14!=g3 && j14!=0 && j14!=gec && j14!=ge && j14!=g && j14!=g4 && j14!=g5 && j14!=g6 && j14!=g7 && j14!=g8 && j14!=g9 && j14!=g10 && j14!=g11 && j14!=g12 && j14!=g13)
+		{
+			if(a11>a[dizi[g13]] [dizi[j14]] )
+			{
+				a11=a[dizi[g13]] [dizi[j14]];
+				g14=j14;
+			}
+		}
+	}
+	
+	a12=200;	
+	for(j15=0;j15<i+1;j15++)
+	{
+		if(j15!=g3 && j15!=0 && j15!=gec && j15!=ge && j15!=g && j15!=g4 && j15!=g5 && j15!=g6 && j15!=g7 && j15!=g8 && j15!=g9 && j15!=g10 && j15!=g11 && j15!=g12 && j15!=g13 && j15!=g14)
+		{
+			if(a12>a[dizi[g14]] [dizi[j15]] )
+			{
+				a12=a[dizi[g14]] [dizi[j15]];
+				g15=j15;
+			}
+		}
+	}
+	
+	a13=200;	
+	for(j16=0;j16<i+1;j16++)
+	{
+		if(j16!=g3 && j16!=0 && j16!=gec && j16!=ge && j16!=g && j16!=g4 && j16!=g5 && j16!=g6 && j16!=g7 && j16!=g8 && j16!=g9 && j16!=g10 && j16!=g11 && j16!=g12 && j16!=g13 && j16!=g14 && j16!=g15)
+		{
+			if(a13>a[dizi[g15]] [dizi[j16]] )
+			{
+				a13=a[dizi[g15]] [dizi[j16]];
+				g16=j16;
+			}
+		}
+	} 
+	
+	a14=200;	
+	for(j17=0;j17<i+1;j17++)
+	{
+		if(j17!=g3 && j17!=0 && j17!=gec && j17!=ge && j17!=g && j17!=g4 && j17!=g5 && j17!=g6 && j17!=g7 && j17!=g8 && j17!=g9 && j17!=g10 && j17!=g11 && j17!=g12 && j17!=g13 && j17!=g14 && j17!=g15 && j17!=g16)
+		{
+			if(a14>a[dizi[g16]] [dizi[j17]] )
+			{
+				a14=a[dizi[g16]] [dizi[j17]];
+				g17=j17;
+			}
+		}
+	}
+	
+	a1=200;
+	for(j18=0; j18<i+1; j18++)
+	{
+		if(j18!=g3 && j18!=0 && j18!=gec && j18!=ge && j18!=g && j18!=g4 && j18!=g5 && j18!=g6 && j18!=g7 && j18!=g8 && j18!=g9 && j18!=g10 && j18!=g11 && j18!=g12 && j18!=g13 && j18!=g14 && j18!=g15 && j18!=g16 && j18!=g17)
+		{
+			if(a1>a[dizi[g17]] [dizi[j18]])
+			{
+				a1=a[dizi[g17]] [dizi[j18]];
+				g18=j18;
+			}
+		}
+	}
+	
+	a2=200;
+	for(j19=0; j19<i+1; j19++)
+	{
+		if(j19!=g3 && j19!=0 && j19!=gec && j19!=ge && j19!=g && j19!=g4 && j19!=g5 && j19!=g6 && j19!=g7 && j19!=g8 && j19!=g9 && j19!=g10 && j19!=g11 && j19!=g12 && j19!=g13 && j19!=g14 && j19!=g15 && j19!=g16 && j19!=g17 && j19!=g18)
+		{
+			if(a2>a[dizi[g18]] [dizi[j19]])
+			{
+				a2=a[dizi[g18]] [dizi[j19]];
+				g19=j19;
+			}
+		}
+	}
+	
+	a3=200;
+	for(j20=0; j20<i+1; j20++)
+	{
+		if(j20!=g3 && j20!=0 && j20!=gec && j20!=ge && j20!=g && j20!=g4 && j20!=g5 && j20!=g6 && j20!=g7 && j20!=g8 && j20!=g9 && j20!=g10 && j20!=g11 && j20!=g12 && j20!=g13 && j20!=g14 && j20!=g15 && j20!=g16 && j20!=g17 && j20!=g18 && j20!=g19)
+		{
+			if(a3>a[dizi[g19]] [dizi[j20]])
+			{
+				a3=a[dizi[g19]] [dizi[j20]];
+				g20=j20;
+			}
+		}
+	}
+	
+	a4=200;
+	for(j21=0; j21<i+1; j21++)
+	{
+		if(j21!=g3 && j21!=0 && j21!=gec && j21!=ge && j21!=g && j21!=g4 && j21!=g5 && j21!=g6 && j21!=g7 && j21!=g8 && j21!=g9 && j21!=g10 && j21!=g11 && j21!=g12 && j21!=g13 && j21!=g14 && j21!=g15 && j21!=g16 && j21!=g17 && j21!=g18 && j21!=g19 && j21!=g20)
+		{
+			if(a4>a[dizi[g20]] [dizi[j21]])
+			{
+				a4=a[dizi[g20]] [dizi[j21]];
+				g21=j21;
+			}
+		}
+	}
+	
+	a5=200;
+	for(j22=0;j22<i+1;j22++)
+	{
+		if(j22!=g3 && j22!=0 && j22!=gec && j22!=ge && j22!=g && j22!=g4 && j22!=g5 && j22!=g6 && j22!=g7 && j22!=g8 && j22!=g9 && j22!=g10 && j22!=g11 && j22!=g12 && j22!=g13 && j22!=g14 && j22!=g15 && j22!=g16 && j22!=g17 && j22!=g18 && j22!=g19 && j22!=g20 && j22!=g21)
+		{
+			if(a5>a[dizi[g21]] [dizi[j22]])
+			{
+				a5=a[dizi[g21]] [dizi[j22]];
+				g22=j22;
+			}
+		}
+	}
+	
+	a6=200;
+	for(j23=0; j23<i+1; j23++)
+	{
+		if(j23!=g3 && j23!=0 && j23!=gec && j23!=ge && j23!=g && j23!=g4 && j23!=g5 && j23!=g6 && j23!=g7 && j23!=g8 && j23!=g9 && j23!=g10 && j23!=g11 && j23!=g12 && j23!=g13 && j23!=g14 && j23!=g15 && j23!=g16 && j23!=g17 && j23!=g18 && j23!=g19 && j23!=g20 && j23!=g21 && j23!=g22)
+		{
+			if(a6>a[dizi[g22]] [dizi[j23]])
+			{
+				a6=a[dizi[g22]] [dizi[j23]];
+				g23=j23;
+			}
+		}
+	}
+	
+	a7=200;
+	for(j24=0; j24<i+1; j24++)
+	{
+		if(j24!=g3 && j24!=0 && j24!=gec && j24!=ge && j24!=g && j24!=g4 && j24!=g5 && j24!=g6 && j24!=g7 && j24!=g8 && j24!=g9 && j24!=g10 && j24!=g11 && j24!=g12 && j24!=g13 && j24!=g14 && j24!=g15 && j24!=g16 && j24!=g17 && j24!=g18 && j24!=g19 && j24!=g20 && j24!=g21 && j24!=g22 && j24!=g23)
+		{
+			if(a7>a[dizi[g23]] [dizi[j24]])
+			{
+				a7=a[dizi[g23]] [dizi[j24]];
+				g24=j24;
+			}
+		}
+	}
+	
+	a8=200;
+	for(j25=0; j25<i+1; j25++)
+	{
+		if(j25!=g3 && j25!=0 && j25!=gec && j25!=ge && j25!=g && j25!=g4 && j25!=g5 && j25!=g6 && j25!=g7 && j25!=g8 && j25!=g9 && j25!=g10 && j25!=g11 && j25!=g12 && j25!=g13 && j25!=g14 && j25!=g15 && j25!=g16 && j25!=g17 && j25!=g18 && j25!=g19 && j25!=g20 && j25!=g21 && j25!=g22 && j25!=g23 && j25!=g24)
+		{
+			if(a8>a[dizi[g24]] [dizi[j25]])
+			{
+				a8=a[dizi[g24]] [dizi[j25]];
+				g25=j25;
+			}
+		}
+	}
+	
+	a9=200;
+	for(j26=0; j26<i+1; j26++)
+	{
+		if(j26!=g3 && j26!=0 && j26!=gec && j26!=ge && j26!=g && j26!=g4 && j26!=g5 && j26!=g6 && j26!=g7 && j26!=g8 && j26!=g9 && j26!=g10 && j26!=g11 && j26!=g12 && j26!=g13 && j26!=g14 && j26!=g15 && j26!=g16 && j26!=g17 && j26!=g18 && j26!=g19 && j26!=g20 && j26!=g21 && j26!=g22 && j26!=g23 && j26!=g24 && j26!=g25)
+		{
+			if(a9>a[dizi[g25]] [dizi[j26]])
+			{
+				a9=a[dizi[g25]] [dizi[j26]];
+				g26=j26;
+			}
+		}
+	}
+	y27=q+n+h+k+w+z+v+u+t+s+r+p+o+m+a11,a12+a13+a14+a1+a2+a3+a4+a5+a6+a7+a8+a9;
+	printf("Gidilecek Guzergah= 0 %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d Gidilecek Yolun Uzunlugu= %f",dizi[g],dizi[ge],dizi[gec],dizi[g3],dizi[g4],dizi[g5],dizi[g6],dizi[g7],dizi[g8],dizi[g9],dizi[g10],dizi[g11],dizi[g12],dizi[g13],dizi[g14],dizi[g15],dizi[g16],dizi[g17],dizi[g18],dizi[g19],dizi[g20],dizi[g21],dizi[g22],dizi[g23],dizi[g24],dizi[g25],dizi[g26],y27);
+}
+
+} 
